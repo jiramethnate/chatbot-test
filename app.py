@@ -18,7 +18,7 @@ from linebot import (
 
 app = Flask(__name__)
 
-lineaccesstoken = 'sVi63a9na79V/b+yduVI4yExkvFLcsZGHpCNgiDRnJVNdlWG22i5ICYiEfSmyX3o0ES4ZZ268XYaGETDPlSEu6htUND4nMeICcbHDvUoj3JHlLO0ZQBLh26jgoWOOk6moTB3eRp8U0+wBHbt54SZQwdB04t89/1O/w1cDnyilFU='
+lineaccesstoken = 'fCPVtYJvqDDnmA7dyg2FxRKkK3J7iDzljVr+ET/lIU0nlOZa4zY/5Y/Q2RlHIUIA7Vc/pBNdtPUnex1NUPF6sfDLBFOYGsVjZKeAA4IdUfbYCVun8SNyTEVYeup0+1EZdaOtkwr6kQYIB4NvUHrodwdB04t89/1O/w1cDnyilFU='
 line_bot_api = LineBotApi(lineaccesstoken)
 
 casedata = pd.read_excel('casedata.xlsx')
@@ -180,7 +180,6 @@ def handle_text(inpmessage):
     return replyObj
 
 def handle_postback(inpmessage):
-    flex = flexmessage(inpmessage)
     replyObj = TextSendMessage(text=inpmessage)
     return replyObj
 
